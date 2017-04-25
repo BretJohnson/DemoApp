@@ -11,6 +11,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file("shared-insecure-keystore.jks")
+            storePassword "password"
+            keyAlias "app"
+            keyPassword "password"
+        }
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
